@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listitem_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:background="#c5c5c5">
+
+    <TextView
+        android:id="@+id/tv_channelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="频道名称"
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

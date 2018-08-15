@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
 				int fromPosition = viewHolder.getAdapterPosition();//得到拖动ViewHolder的position
 				int toPosition = target.getAdapterPosition();//得到目标ViewHolder的position
 				Log.w("ItemTouchHelper","{onMove}fromPosition="+fromPosition+";toPosition="+toPosition);
+				//这里可以添加判断，实现某一项不可交换
 				if (fromPosition < toPosition) {
 					for (int i = fromPosition; i < toPosition; i++) {
 						Collections.swap(mChannelBeanArrayList, i, i + 1);
@@ -173,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
 				}
 
 				viewHolder.itemView.setBackgroundColor(Color.parseColor("#c5c5c5"));//演示拖拽的完毕后item背景颜色恢复原样（实际情况中去掉）
+				mChannelAdapter.notifyDataSetChanged();//解决重叠问题
 			}
 		});
 		//设置是否可以排序
